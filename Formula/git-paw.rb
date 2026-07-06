@@ -5,21 +5,21 @@ class GitPaw < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/bearicorn/git-paw/releases/download/v0.9.0/git-paw-aarch64-apple-darwin.tar.xz"
-      sha256 "a2a0fedb92923a9c0b0973d9cb4df9b29a45265ca96048bdb3e611f497b555a1"
+      sha256 "e982a9bded26f181f71e12cca600e35eb87da1e7f945992b21cdf1f7153f114a"
     end
     if Hardware::CPU.intel?
       url "https://github.com/bearicorn/git-paw/releases/download/v0.9.0/git-paw-x86_64-apple-darwin.tar.xz"
-      sha256 "e70943b1388bfde1b6052d0bb7ed0f487dac4413347c95a6150e5164aba79e97"
+      sha256 "075b554d42509b750a5cb494dd21bbd6f8eea83daaa8a2e8f922015e1f998493"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/bearicorn/git-paw/releases/download/v0.9.0/git-paw-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f06628cedebc4c019b56b75248160b600c82708eb22576ecb9908b899eb10f7b"
+      sha256 "df008c303daad3b40cc9d13c8cbbae914213ae830de805ef15eccee8dba9bdfd"
     end
     if Hardware::CPU.intel?
       url "https://github.com/bearicorn/git-paw/releases/download/v0.9.0/git-paw-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "7307153d1a4ad56ba0dae305b200f357692f0080ffba0cfd41379449e46bfa53"
+      sha256 "2f7de6bd2364774d524738c78eb6617c27086feb231056f125b57f17a8d8c11e"
     end
   end
   license "MIT"
