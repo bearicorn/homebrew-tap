@@ -1,25 +1,25 @@
 class GitPaw < Formula
   desc "Parallel AI Worktrees — orchestrate multiple AI coding CLI sessions across git worktrees"
   homepage "https://bearicorn.github.io/git-paw"
-  version "0.13.0"
+  version "0.14.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bearicorn/git-paw/releases/download/v0.13.0/git-paw-aarch64-apple-darwin.tar.xz"
-      sha256 "c139875bc6a70a99a47b962669a9306dbc76f24d36fd0a742989c5b3afe1ae5d"
+      url "https://github.com/bearicorn/git-paw/releases/download/v0.14.0/git-paw-aarch64-apple-darwin.tar.xz"
+      sha256 "1de2321d7a74ce9b9909b455fe7a57e0a8a0b5b10f962361ad99d7b09e23b4eb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bearicorn/git-paw/releases/download/v0.13.0/git-paw-x86_64-apple-darwin.tar.xz"
-      sha256 "29211f24cf4f6bc2524ed40b629ffb8a42bf97c07a8c8e05dd519ff7d9c5ffdf"
+      url "https://github.com/bearicorn/git-paw/releases/download/v0.14.0/git-paw-x86_64-apple-darwin.tar.xz"
+      sha256 "2584d9bd1553513a9db0baaca90afeca2e07bd9937ee3c59e9def602cf6c6f30"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bearicorn/git-paw/releases/download/v0.13.0/git-paw-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "dcbfdc18a5f5471351643217ab07cad7ad30b816d138868f9d710aac730917b8"
+      url "https://github.com/bearicorn/git-paw/releases/download/v0.14.0/git-paw-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "51a10cafac5c7c0a4336b467dbce699c3e12bac3b054e2400441acb6c324a9e1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bearicorn/git-paw/releases/download/v0.13.0/git-paw-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "73fa9e78a8d484b1da0af59fb46d0b02a8b86c0f12bdf609fb2da715ea2ceef9"
+      url "https://github.com/bearicorn/git-paw/releases/download/v0.14.0/git-paw-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2d19cd6aae1a05b5e6410b92764260481fd05a6f51dabff9331b0f8f4098295f"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class GitPaw < Formula
   end
 
   def install
-    bin.install "git-paw" if OS.mac? && Hardware::CPU.arm?
-    bin.install "git-paw" if OS.mac? && Hardware::CPU.intel?
-    bin.install "git-paw" if OS.linux? && Hardware::CPU.arm?
-    bin.install "git-paw" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "git-paw"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "git-paw"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "git-paw"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "git-paw"
+    end
 
     install_binary_aliases!
 
