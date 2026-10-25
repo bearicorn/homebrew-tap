@@ -1,25 +1,25 @@
 class GitPaw < Formula
   desc "Parallel AI Worktrees — orchestrate multiple AI coding CLI sessions across git worktrees"
   homepage "https://bearicorn.github.io/git-paw"
-  version "0.16.0"
+  version "0.17.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bearicorn/git-paw/releases/download/v0.16.0/git-paw-aarch64-apple-darwin.tar.xz"
-      sha256 "ed7487c6dd9314f02a45cb5d4b0e0e05eaed9758b6930ecc314015dd9aa75108"
+      url "https://github.com/bearicorn/git-paw/releases/download/v0.17.0/git-paw-aarch64-apple-darwin.tar.xz"
+      sha256 "65935574c4b80a06d482cc81ecd485ebd04e7f9e46ee421e3c83a4f79ddfcfc1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bearicorn/git-paw/releases/download/v0.16.0/git-paw-x86_64-apple-darwin.tar.xz"
-      sha256 "95826c089e4338e24a6f3e6d7ce8e07fe3309eac715c602c70976207220c0f2c"
+      url "https://github.com/bearicorn/git-paw/releases/download/v0.17.0/git-paw-x86_64-apple-darwin.tar.xz"
+      sha256 "ef08028dbc2c6c70df8e4e41c63a42ef6762b3ac76b5f6c023d6cfd1cac039a4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/bearicorn/git-paw/releases/download/v0.16.0/git-paw-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "41a8f307eceecfc5d7e8d89e63cee6382fb6e65f5881be6553e25e1a84aa51b0"
+      url "https://github.com/bearicorn/git-paw/releases/download/v0.17.0/git-paw-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3f3614f5f75ecf4c88b7949522da73add0b0c496a73cbceb59ce9b3d22e2e024"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bearicorn/git-paw/releases/download/v0.16.0/git-paw-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "531c83dcebfd8c76216fa5b7b3a307f2ccdcabfe1775ce1dc03f425db7f8e9bc"
+      url "https://github.com/bearicorn/git-paw/releases/download/v0.17.0/git-paw-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8e36c7b0d1d3a452053ebfe83adfcbf189699360ad1da5706b51bd024caa2e6b"
     end
   end
   license "MIT"
